@@ -57,7 +57,7 @@ header{
     color: #fff;
     font-weight: 700;
     font-size: 18px;
-    line-height: 1.66;
+    /* line-height: 1.66; */
     position: relative;
     display: inline-block;
     transition: color 450ms cubic-bezier(0.4, 0, 0.2, 1);
