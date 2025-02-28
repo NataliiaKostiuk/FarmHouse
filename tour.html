@@ -26,8 +26,8 @@
         
     </header>
     <main>
-      <section class="hero-tour-section">
-        <div class="hero-tour">
+      <section class="hero-tour-section"> 
+        <div class="hero-tour">          
           <img class="img-tour-hero" src="./imiges/tour-cows.jpg" alt="cows">
           <img class="img-tour-hero" src="./imiges/bikes.jpg" alt="bikes">
           <img class="img-tour-hero" src="./imiges/apple-trees.jpg" alt="apples">
@@ -38,9 +38,44 @@
       </div>
       </section>
       <section class="discr-tour">
-        <h1 class="additional-title">We are glad to have guests</h1>
-        <h3></h3>
-        <p></p>
+        <div class="wrap-discroption">
+        <h3 class="subtitle discrib-title">Natural Products - The Key to Good Health</h3>       
+        <p class="text">We care about your taste and well-being, which is why we grow eco-friendly berries, vegetables, and greens without chemicals or pesticides.
+          What awaits you on our farm?</p>
+        <p class="span-text discrib-text">🍓 Sweet strawberries and juicy blueberries - taste them fresh from the field!</p>
+        <p class="span-text discrib-text">🍅 Greenhouses filled with fragrant tomatoes, fresh cabbage, and crispy carrots.</p>
+        <p class="span-text discrib-text">🥛 Fresh milk from our cows, rich in calcium and vitamins.</p>
+        <p class="span-text discrib-text">🥚 Organic eggs from free-range chickens, raised in a natural and healthy environment.</p>
+        <p class="span-text discrib-text">You can observe the farming process, taste fresh produce straight from the garden, and even take part in the harvest!</p>
+        <h3 class="subtitle discrib-title">Exciting Activities for the Whole Family</h3>
+        <p class="span-text discrib-text">🚜 Love adventure? Try our quad bike rentals!  Ride through scenic farm trails,
+           enjoy the fresh air, and get your adrenaline pumping.</p>
+        <p class="span-text discrib-text">👧 For our little guests, we have a children's playground with swings, slides, and a sandbox! While kids have fun,
+           parents can relax and enjoy the peaceful countryside.</p>
+        <h3 class="subtitle discrib-title">Farm Café - Delicious and Healthy</h3>   
+        <p class="text">After the tour, stop by our cozy café, where we serve fresh, farm-to-table meals made from organic ingredients.</p>
+        <p class="span-text discrib-text">🥤 Milkshakes made from fresh farm milk</p>
+        <p class="span-text discrib-text">🍞 Homemade pastries</p>
+        <p class="span-text discrib-text">🥗 Fresh vegetable salads</p>
+        <p class="span-text discrib-text">🍰 Berry desserts</p>
+      </div>
+      <div class="booking-section">
+        <h2 class="booking-title">Book Your Tour</h2>
+        <form class="booking-form">
+            <input type="text" class="booking-input" placeholder="Your Name" required>
+            <input type="email" class="booking-input" placeholder="Your Email" required>
+            <input type="date" class="booking-input" required>
+            <select class="booking-input" required>
+              <option value="" disabled selected>Select Arrival Time</option>
+              <option value="09:00">09:00 AM</option>
+              <option value="13:00">01:00 PM</option>
+          </select>
+            <input type="number" class="booking-input" placeholder="Number of adult tickets" min="1" required>
+            <input type="number" class="booking-input" placeholder="Number of children tickets" min="1">            
+   
+            <button type="submit" class="booking-btn">Book Now</button>
+        </form>
+    </div>
       </section>
     </main> 
     <footer class="footer">
