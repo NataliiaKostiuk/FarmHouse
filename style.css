@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: rgba(26, 88, 35, 0.912);
+        width: 1440px;
+        padding: 0 15px;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+} 
+
+.navigation{
+    width: 100%;
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 40px;
+}
+
+.nav-link {
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.66;
+    position: relative;
+    display: inline-block;
+    transition: color 450ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #F7C35F;
+    transform: scaleX(0);
+    transition: transform 450ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: right;
+}
+.nav-link:hover,
+.nav-link:focus {
+    color: #F7C35F;
+}
+.nav-link:hover::after,
+.nav-link:focus::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+/* ########## footer############################## */
+.footer{
+    background-color: #061408;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    margin-top: 7px;
+}
+
+.footer-container {
+    padding-top: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 100px;
+}
+
+.footer-nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.footer-text {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* ##################### HERO #################### */
+.hero{
+    background-image: url("./imiges/farms-scotland-hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    padding: 23px;
+}
+.hero-intro{
+    width: 320px;
+    height: 350px;
+    background-color: rgba(20, 61, 26, 0.637);
+    margin-left: auto;
+    padding: 15px;
+}
+.hero-title{
+    font-family: "Open Sans";
+    color: #fff;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 1.31;
+    margin-bottom: 20px;
+}
+.text{
+    color: #F7C35F;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.66;
+    margin-bottom: 10px;
+}
+.subtext{
+    color: #F7C35F;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.12;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* ############# Presentation ########## */
+.intro-text{
+    font-family: "Roboto";
+        color: #fff;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.82;
+        margin-bottom: 20px;
+        width: 100%; 
+        text-align: justify;
+}
+.subtitle{
+    font-family: "Roboto";
+    color: #F7C35F;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.21;
+    margin-bottom: 25px;
+}
+.intro-img{
+    width: 600px;
+    height: 500px;
+    
+}
+.intro{
+    margin-top: 25px;
+    display: flex;
+    
+}
+.span-container{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+.span-text{
+    color: #fff;
+
+}
+.intro-conteiner{
+    width: 650px;
+    padding: 15px 45px 15px 15px;
+    margin-left: auto;
+}
+
+.img-wrap{
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* ########### Our products section ################ */
+.section-prod{
+    margin-top: 70px;
+    margin-bottom: 40px;
+
+}
+.prod-title{
+ margin-bottom: 70px;
+}
+.prod-container{
+    display: flex;
+    gap: 30px;
+}
+.prod-list{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+}
+.svg-product{
+    width: 50px;
+    height: 50px;
+}
+.svg-prod-wrap{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background-image:linear-gradient(rgba(1, 34, 11, 0.1), rgba(10, 20, 14, 0.7));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 450ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.svg-prod-wrap:hover,
+.svg-prod-link:focus .svg-prod-wrap {
+    background-color: rgb(102, 107, 6);
+    opacity: 1;
+}
+.prod-title{
+    text-align: center;
+}
+
+/* ############ Page BLOG ################# */
+
+/* *****arcticals*********** */
+.main-blog{
+    display: flex;
+    justify-content: space-between;
+}
+.articles{
+    margin-top: 25px;
+}
+.article-container{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 65px;
+}
+.art-text{
+    text-indent: 1em;
+
+}
+.article-img{
+    width: 480px;
+    height: 450px;
+}
+.artic-wrap{
+    width: 500px;
+    padding: 0 15px ;
+}
+
+/* **** aditional arcticals***** */
+.addit-info{
+    width: 370px;
+    height: 967px;
+    border: 1px solid #F7C35F ;
+    margin-top: 25px;
+    padding: 0 10px;
+    }
+
+.additional-title{
+    font-family: "Roboto";
+    color: #fff;
+    font-weight: 700;
+    font-size: 29px;
+    margin-bottom: 37px; 
+    margin-top: 25px; 
+    text-align: center;  
+}
+.add-img{
+    width: 100%;
+    height: 140px;
+}
+.add-span{
+    font-family: "Roboto";
+        color: #fff;
+        font-weight: 600;
+        font-size: 14px;
+        margin-top: 10px;
+}
+.add-text{
+    font-family: "Roboto";
+    color: #e0d77e;;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.12;
+    width: 100%; 
+    text-align: justify;
+    margin-top: 7px;
+}
+.add-wrap{
+    background-image:linear-gradient(rgba(1, 34, 11, 0.1), rgba(10, 20, 14, 0.7));
+    padding: 7px;
+    margin-bottom: 28px;
+}
+.add-link{
+    color: #F7C35F;
+    font-weight: 600;
+    line-height: 1.32;
+    transition: color 450ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.add-link:focus,
+.add-link:hover{
+   color: #e68900;
+}
+
+/* ********* FORM ADD COMMENT*************** */
+.comment-section {
+    width: 100%;
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #d0e859;
+    border-radius: 10px;
+}
+
+.comment-title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    align-items:center ;
+}
+
+.comment-input,
+.comment-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #F7C35F;
+    border-radius: 5px;
+    transition: color 450ms cubic-bezier(0.4, 0, 0.2, 1);    
+}
+.comment-input:hover,
+.comment-textarea:hover,
+.comment-input:focus,
+.comment-textarea:hover{
+    color: #e68900; 
+    outline: none;   
+}
+
+
+.comment-textarea {
+    height: 120px;
+    resize: none;
+}
+
+.comment-btn {
+    margin-bottom: 20px;
+    width: 110px;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #ff9800;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 450ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment-btn:hover {
+    background-color: #e68900;
+}
+
+/* ############ Farm-tour ######################## */
+.hero-tour {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.img-tour-hero {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: fade 21s infinite;
+    opacity: 0;
+}
+
+.img-tour-hero:nth-child(1) { animation-delay: 0s; }
+.img-tour-hero:nth-child(2) { animation-delay: 3s; }
+.img-tour-hero:nth-child(3) { animation-delay: 6s; }
+.img-tour-hero:nth-child(4) { animation-delay: 9s; }
+.img-tour-hero:nth-child(5) { animation-delay: 12s; }
+.img-tour-hero:nth-child(6) { animation-delay: 15s; }
+.img-tour-hero:nth-child(7) { animation-delay: 18s; }
+
+@keyframes fade {
+    0%, 100% { opacity: 0; }
+    10%, 30% { opacity: 1; }
+    40% { opacity: 0; }
+}
