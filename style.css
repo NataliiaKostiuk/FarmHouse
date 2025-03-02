@@ -255,7 +255,7 @@ header{
     opacity: 1;
 }
 .svg-prod-wrap:hover .svg-product {
-    transform: scale(1.5); /* Увеличиваем до 200px (80px * 2.5) */
+    transform: scale(1.5);
 }
 .prod-title{
     text-align: center;
@@ -509,10 +509,8 @@ padding: 20px;
     appearance: none; 
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='black' d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E"); /* Кастомная стрелочка */
     background-repeat: no-repeat;
-    background-position: right 18px center; /* Размещаем стрелку с отступом 18px */
+    background-position: right 18px center;
     background-size: 16px;    
-    -webkit-appearance: none; /* Убирает стандартную стрелку в Safari */
-    -moz-appearance: none; /* Убирает в Firefox */
     cursor: pointer;
 }
 
@@ -616,6 +614,7 @@ padding: 20px;
     padding: 20px 0;
     overflow: hidden;
     position: relative;
+    margin-bottom: 35px;
 }
 
 .dish-slider {
@@ -629,13 +628,14 @@ padding: 20px;
     display: flex;
     gap: 15px;
     width: 200%; 
-    animation: slide 35s linear infinite;
+    animation: slide 40s linear infinite;
 }
 
 .dish-img {
     width: 10%; 
     height: 300px;
     object-fit: cover;
+
 }
 
 @keyframes slide {
@@ -645,4 +645,59 @@ padding: 20px;
     to {
         transform: translateX(-100%);
     }
+}
+
+/* ###### menu ######### */
+.img-menu{
+    margin: 20px auto;
+    box-shadow: 10px 40px 10px rgba(5, 240, 52, 0.1);
+
+}
+.contact-cafe{
+    display: flex;
+    gap: 305px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.cont-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.mar-botton{
+    margin-bottom: 0;
+}
+/* ########### CONTACTS PAGE########################### */
+.google-maps{
+    width: 780px;
+    height: 765px;
+    padding: 20px;
+    border: 1px solid #F7C35F;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #e0d77e;
+    justify-content: end;
+    
+}
+.wrap-maps{
+    display: flex;
+    justify-content: space-between;
+
+}
+.wrap-maps{
+    margin-top: 15px;
+}
+.link{
+    display: block;
+}
+.contact-section{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.social-section{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
