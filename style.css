@@ -2,7 +2,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Roboto", serif;
-    font-optical-sizing: auto;
     font-style: normal;
 }
 
@@ -259,6 +258,15 @@ header{
 }
 .prod-title{
     text-align: center;
+}
+.video-container {
+    width: 100%;
+    max-width: 1440px; 
+    margin: 0 auto;
+}
+
+.responsive-iframe {
+    width: 100%;
 }
 .section-video{
     margin-bottom: 20px;
