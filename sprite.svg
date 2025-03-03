@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="icon-facebook" viewBox="0 0 32 32">
+        <path fill="#1877f2" d="M31.997 15.999c0-8.836-7.163-15.999-15.999..."></path>
+    </symbol>
+
+    <symbol id="icon-instagram" viewBox="0 0 32 32">
+        <path fill="#e4405f" d="M16 0c-4.347 0-4.889 0.020-6.596 0.096..."></path>
+    </symbol>
+
+    <symbol id="icon-messenger" viewBox="0 0 32 32">
+        <path fill="#00b2ff" d="M0 15.52c0-8.92 6.987-15.52 16-15.52s16 6.6..."></path>
+    </symbol>
+
+    <symbol id="icon-telegram" viewBox="0 0 32 32">
+        <path fill="#2ca5e0" d="M31.88 5.053l-4.813 22.733c-0.333 1.613-1.307 2..."></path>
+    </symbol>
+</svg>
