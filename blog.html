@@ -12,7 +12,11 @@
 <body>
   <header>
     <div><a href="./index.html"><img  class="logo-img" src="./imiges/farmLogo1.png" alt="logo"></a></div>
-    
+    <button class="burger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>    
         <nav class="navigation">
          <ul class="nav-list">
             <li class="nav-item" ><a class="nav-link" href="./index.html">Home</a></li>
@@ -82,6 +86,7 @@
   </section>
   <section class="addit-info">
     <h2 class="additional-title">You may also like ...</h2>
+    <div class="addition-articles">
     <div class="add-wrap">
       <img class="add-img" src="./imiges/galloway-cows.jpg" alt="cows">
       <p class="add-span">Whole Farm Plans for Dairy Farms</p>
@@ -109,6 +114,7 @@
           National Carrot Day 2024 is taking place...</a>
       </p>
     </div>
+  </div>
     <div class="comment-section">
       <h2 class="comment-title">Leave your feedback here</h2>
       <form class="comment-form">
@@ -162,5 +168,6 @@
 <p class="footer-text">© 2025 FarmHouse. All Rights Reserved.</p>
 </div>
 </footer>  
+<script type="module" src="./burgerMenu.js"></script>  
 </body>
 </html>

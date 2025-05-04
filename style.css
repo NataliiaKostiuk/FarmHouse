@@ -26,34 +26,92 @@ p {
     margin: 0;
     padding: 0;
 }
-
-
 body{
     background-color: rgba(26, 88, 35, 0.912);
-        width: 1440px;
+        /* min-width: 340px; */
         padding: 0 15px;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: auto;    
 }
+@media screen and (max-width:576){
+    body{
+        max-width: 576px;
+    }
 
-header{
+}
+@media screen and (min-width: 577) and (max-width: 767px){
+    body{
+        max-width: 768px;
+    }
+
+}
+@media screen and (min-width: 768px){
+    body{
+     max-width: 1440px;
+    }
+
+}
+header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 10px 0;
-} 
-
-.navigation{
-    width: 100%;
+    position: relative;
 }
-.nav-list{
+
+.logo-img {
+    max-height: 40px;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+.burger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Анімація хрестика */
+.burger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+.burger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.navigation {
+   
+    width: 60%;
+}
+
+.nav-list {
     display: flex;
     align-items: center;
-    justify-content: end;
     gap: 40px;
 }
 
 .nav-link {
     color: #fff;
+    width: 100%;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.66;
@@ -61,6 +119,7 @@ header{
     display: inline-block;
     transition: color 450ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .nav-link::after {
     content: "";
     position: absolute;
@@ -82,6 +141,57 @@ header{
     transform: scaleX(1);
     transform-origin: left;
 }
+
+@media screen and (max-width: 767px) {
+    .burger {
+        display: flex;
+    }
+
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 53.33%;
+        background-color: rgba(26, 88, 35, 0.95);
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 0 0 0 10px;
+        z-index: 1000;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        width: 100%;
+    }
+
+    .nav-link {
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 768px)  {
+
+    .navigation{
+        width: 100%;
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+    }
+    .nav-list{
+        gap: 25px;
+        justify-content: end;
+    }
+    
+
+}
+
 /* ########## footer############################## */
 .footer{
     background-color: #061408;
@@ -93,7 +203,7 @@ header{
 
 .footer-container {
     padding-top: 20px;
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -102,40 +212,66 @@ header{
 }
 
 .footer-logo img {
-    width: 100px;
+    width: 70px;
 }
-
+@media  screen and (max-width: 768px) {
+    .footer-logo img {
+        width: 100px;
+    }
+}
 .footer-nav ul {
     display: flex;
-    gap: 15px;
+    gap: 5px;
 }
-
+@media  screen and (max-width: 768px) {
+    .footer-nav ul {
+        display: flex;
+        gap: 15px;
+    }
+}
 .footer-nav a {
     color: #fff;
     text-decoration: none;
 }
 
-
-.footer-text {
-    font-size: 14px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.footer-item{
+    font-size: 12px;
 }
-/* ##################### HERO #################### */
+.footer-text {
+    font-size: 8px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+@media  screen and (max-width: 768px) {
+    .footer-text {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+   
+    }
+}/* ##################### HERO #################### */
 .hero{
     background-image: url("./imiges/farms-scotland-hero.jpg");
     background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
     height: 400px;
     padding: 23px;
 }
 .hero-intro{
-    width: 320px;
+    max-width: 170px;
     height: 350px;
     background-color: rgba(20, 61, 26, 0.637);
     margin-left: auto;
     padding: 15px;
+}
+@media  screen and (max-width: 768px) {
+    .hero-intro{
+        width: 220px;
+        height: 350px;
+        background-color: rgba(20, 61, 26, 0.637);
+        margin-left: auto;
+        padding: 15px;
+    }
 }
 .hero-title{
     font-family: "Open Sans";
@@ -178,19 +314,33 @@ header{
     font-weight: 700;
     font-size: 25px;
     line-height: 1.21;
-    margin-bottom: 25px;
     margin-top: 20px;
 }
 .intro-img{
-    width: 670px;
-    height: 550px;
-    
+    width: 100%;
+    min-height: 350px; 
 }
+@media screen and (min-width: 768px){
+    .intro-img{
+        height: 100%; 
+    }
+}
+@media screen  and (max-width: 767px){
+  .info-img{
+    max-width: 670px; 
+  }  
+}
+
 .intro{
     margin-top: 25px;
-    display: flex;
-    
 }
+@media  screen and (min-width: 767px){
+    .intro{
+
+        display: flex;    
+    }
+}
+
 .span-container{
     display: flex;
     gap: 7px;
@@ -202,13 +352,20 @@ header{
     color: #fff;
 
 }
-.intro-conteiner{
-    width: 650px;
-    padding: 15px 15px 15px 15px;
-    margin-left: auto;
-    margin-top: 70px;
-}
 
+.intro-conteiner{
+    padding: 15px;
+    margin-top: 20px;
+}
+@media  screen and (min-width: 767px){
+    .intro-conteiner{
+        width: 650px;
+        padding: 15px;
+        margin-left: auto;
+        margin-top: 70px;
+    }
+       
+}
 .img-wrap{
     border-radius: 20px;
     overflow: hidden;
@@ -223,24 +380,31 @@ header{
 .prod-title{
  margin-bottom: 70px;
 }
-
 .prod-list{
     display: flex;
-    flex-wrap: nowrap;
-    gap: 65px;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: space-around ;
     margin-bottom: 40px;
-
-
 }
+@media screen and (min-width:1439px){
+    .prod-list{
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 65px;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+}
+
 .svg-product{
     width: 60px;
     height: 60px;
     transition: transform 450ms cubic-bezier(0.4, 0, 0.2, 1);    
 }
 .svg-prod-wrap{
-    width: 180px;
-    height: 180px;
+    min-width: 180px;
+    min-height: 180px;
     border-radius: 10px;
     background-image:linear-gradient(rgba(1, 34, 11, 0.1), rgba(10, 20, 14, 0.7));
     display: flex;
@@ -275,40 +439,62 @@ header{
 /* ############ Page BLOG ################# */
 
 /* *****arcticals*********** */
-.main-blog{
-    display: flex;
-    justify-content: space-between;
-}
-.articles{
-    margin-top: 25px;
-}
-.article-container{
-    display: flex;
-    gap: 40px;
-    margin-bottom: 65px;
-}
 .art-text{
     text-indent: 1em;
 
 }
 .article-img{
-    width: 480px;
-    height: 450px;
+    width: 100%;
+    height: 100%;
 }
-.artic-wrap{
-    width: 480px;
+.article-wrap{
+    width: 100%;
 }
-
+.article-container{
+margin-bottom: 35px;    
+}
+@media screen and (min-width: 577) and (max-width: 767px){
+    .article-img{
+        max-width: 480px;
+    }
+    .artic-wrap{
+    max-width: 480px;
+    }  
+}
+@media screen and (min-width: 768px){
+    .article-container{
+        display: flex;
+        gap: 40px;
+        margin-bottom: 65px;
+    }  
+    .main-blog{
+        display: flex;
+        justify-content: space-between;
+    }
+    .articles{
+        margin-top: 25px;
+    }
+    .article-container{
+        display: flex;
+        gap: 40px;
+        margin-bottom: 65px;
+    }
+    
+    .article-img{
+        width: 480px;
+        height: 450px;
+    }
+    .artic-wrap{
+    width: 100%;
+    }
+}
 /* **** aditional arcticals***** */
 .addit-info{
-    width: 370px;
-    height: 967px;
+    margin-top: 25px;
     border: 1px solid #F7C35F ;
     border-radius: 20px;
-    margin-top: 25px;
     padding: 0 10px;
-    }
-
+}
 .additional-title{
     font-family: "Roboto";
     color: #fff;
@@ -355,9 +541,33 @@ header{
 .add-link:hover{
    color: #e68900;
 }
+@media screen and (min-width: 577) and (max-width: 767px){
+.addition-articles{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+}
+@media screen and (min-width: 768px){
+    .addit-info{
+        width: 370px;
+        height: 967px;
+        }
+    
+    .add-img{
+        width: 100%;
+    }
+
+}
+/* 
+
+
+
+ */
 
 /* ********* FORM ADD COMMENT*************** */
-.comment-section {
+/* .comment-section {
     width: 100%;
     height: 445px;
     max-width: 500px;
@@ -420,7 +630,7 @@ header{
 
 .comment-btn:hover {
     background-color: #e68900;
-}
+} */
 
 /* ############ Farm-tour ######################## */
 
