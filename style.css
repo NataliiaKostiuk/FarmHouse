@@ -944,14 +944,36 @@ padding: 20px;
 
 }
 .contact-cafe{
-    display: flex;
-    /* gap: 305px; */
-    justify-content: space-around;
+    justify-items: center;
+    align-items: center; 
     margin-bottom: 10px;
 }
+@media screen and (min-width:768px) and (max-width: 1219px) {
+    .contact-cafe{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 10px;
+    }   
+}
+@media screen  and (min-width:1220px){
+    .contact-cafe{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 10px;
+    }   
+   
+}
 .cont-wrap{
+    width: 200px;
     display: flex;
     flex-direction: column;
+    align-items: start;
     gap: 15px;
 }
 .mar-botton{
@@ -1031,4 +1053,8 @@ padding: 20px;
 .main-color{
     color: #F7C35F;
     
+}
+.contacts{
+    justify-items: start;
+    width: 200px;
 }
